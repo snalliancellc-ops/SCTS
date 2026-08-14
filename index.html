@@ -20,8 +20,8 @@
     <div class="page-shell" id="home">
       <header class="topbar dark-panel">
         <div class="ticker accent">
-          <span>HIGH WIND &amp; STORM WARNING: CREWS DISPATCHING 24/7 STATEWIDE</span>
-          <span>Average Response Time: Under 45 Mins</span>
+          <span>EMERGENCY OR REGULAR TREE CARE: CREWS DISPATCHING 24/7 ACROSS SOUTH Georgia</span>
+          <span>Call us: 678-368-7097</span>
         </div>
 
         <nav class="main-nav">
@@ -227,28 +227,23 @@
         <div class="section-kicker accent">Proven Structural De-escalation</div>
         <h2>Before &amp; After Structural Save Projects</h2>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-photo photo-one">
-              <span class="tag before">Before Damage</span>
-              <span class="tag after green">Secured &amp; Clear</span>
-            </div>
-            <h3>Pine Split on Two-Story Garage</h3>
-            <p>
-              Secured, rigged, and picked by crane with zero further structural impact to the garage roof structure.
-            </p>
-          </article>
+        <div class="project-gallery" aria-label="Project gallery">
+          <button class="project-arrow project-prev" type="button" aria-label="Previous project image">&#8249;</button>
 
           <article class="project-card">
-            <div class="project-photo photo-two">
+            <div class="project-photo" id="project-photo">
               <span class="tag before">Before Damage</span>
               <span class="tag after green">Secured &amp; Clear</span>
             </div>
-            <h3>Uprooted Oak Blocking Entrance</h3>
-            <p>
-              Swift response to section and process a 4-ton oak blockage within 35 minutes of emergency team arrival.
-            </p>
+            <div class="project-copy">
+              <h3 id="project-title">Pine Split on Two-Story Garage</h3>
+              <p id="project-description">
+                Secured, rigged, and picked by crane with zero further structural impact to the garage roof structure.
+              </p>
+            </div>
           </article>
+
+          <button class="project-arrow project-next" type="button" aria-label="Next project image">&#8250;</button>
         </div>
       </section>
 
@@ -382,6 +377,59 @@
             });
           });
         }
+
+        const projectSlides = [
+          {
+            image: 'assets/project-images/481459267_1110051167590489_3861004367774788703_n.jpg',
+            title: 'Pine Split on Two-Story Garage',
+            description: 'Secured, rigged, and picked by crane with zero further structural impact to the garage roof structure.'
+          },
+          {
+            image: 'assets/project-images/486511035_1135299045065701_7882541547769268303_n.jpg',
+            title: 'Storm-Impacted Oak Removal',
+            description: 'Rapid emergency extraction of a leaning oak that threatened the driveway and home entry path.'
+          },
+          {
+            image: 'assets/project-images/486600542_1135298988399040_4420013037590580160_n.jpg',
+            title: 'Large Limb Removal at Commercial Site',
+            description: 'Coordinated crane and rigging team safely dealt with a large limb suspended over a storefront.'
+          },
+          {
+            image: 'assets/project-images/486797229_1135299031732369_8043803304989506354_n.jpg',
+            title: 'Critical Branch Drop Zone',
+            description: 'Controlled de-energized branch fall with zero disruption to the customer’s daily operations.'
+          }
+        ];
+
+        const projectPhoto = document.getElementById('project-photo');
+        const projectTitle = document.getElementById('project-title');
+        const projectDescription = document.getElementById('project-description');
+        const prevButton = document.querySelector('.project-prev');
+        const nextButton = document.querySelector('.project-next');
+
+        let currentProjectIndex = 0;
+
+        function renderProjectSlide(index) {
+          if (!projectPhoto || !projectTitle || !projectDescription) return;
+          const slide = projectSlides[index];
+          projectPhoto.style.backgroundImage = `linear-gradient(180deg, rgba(14, 22, 18, 0.12), rgba(14, 22, 18, 0.16)), url("${slide.image}")`;
+          projectTitle.textContent = slide.title;
+          projectDescription.textContent = slide.description;
+        }
+
+        if (prevButton && nextButton) {
+          prevButton.addEventListener('click', function () {
+            currentProjectIndex = (currentProjectIndex - 1 + projectSlides.length) % projectSlides.length;
+            renderProjectSlide(currentProjectIndex);
+          });
+
+          nextButton.addEventListener('click', function () {
+            currentProjectIndex = (currentProjectIndex + 1) % projectSlides.length;
+            renderProjectSlide(currentProjectIndex);
+          });
+        }
+
+        renderProjectSlide(currentProjectIndex);
       });
     </script>
   </body>
