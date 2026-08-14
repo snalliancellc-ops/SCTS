@@ -1,0 +1,10 @@
+{
+  "name": "southern-classic-tree-services",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static marketing site for Southern Classic Tree Services",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
