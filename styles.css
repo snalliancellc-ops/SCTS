@@ -8,7 +8,7 @@
   --border-strong: rgba(43, 157, 93, 0.8);
   --text: #14231a;
   --muted: rgba(25, 36, 29, 0.7);
-  --accent: #2f9f66;
+  --accent: #72ADD1;
   --accent-2: #5bbd82;
   --logo-dark: #0d4f3a;
   --logo-mid: #2aa76d;
@@ -1134,7 +1134,7 @@ section[id] {
 }
 
 .accent {
-  color: var(--accent);
+  color: #72ADD1;
 }
 
 @media (max-width: 1120px) {
