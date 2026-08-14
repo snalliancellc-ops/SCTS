@@ -89,6 +89,63 @@ section[id] {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Feature hero background layers and layout */
+.feature-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.feature-hero .hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.feature-hero .hero-image .bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.feature-hero .hero-image .bg[style] {
+  /* ensures inline background-image can render smoothly */
+}
+
+/* overlay to improve text contrast */
+.feature-hero .hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.feature-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4.2rem 2rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* ensure first layer is visible by default when JS hasn't run */
+.feature-hero .hero-image .layer-a { opacity: 1; }
+
+
 .metrics-inner {
   position: relative;
   z-index: 1;
