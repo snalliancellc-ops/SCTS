@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Tree Removal — Southern Classic Tree Experts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar dark-panel">
+        <div class="ticker accent">
+          <span>EMERGENCY OR REGULAR TREE CARE: CREWS DISPATCHING 24/7 ACROSS SOUTH Georgia</span>
+          <span>Call or Text us: 678-368-7097</span>
+        </div>
+
+        <nav class="main-nav">
+          <div class="brand-nav">
+            <div class="logo-box small"><span class="hammer"></span></div>
+            <div class="brand-copy nav-brand">
+              <h2>Southern Classic Tree Experts</h2>
+              <p>Total tree care and removal</p>
+            </div>
+          </div>
+
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div class="nav-links" id="site-nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#team">Our Team</a>
+            <a href="index.html#contact">Contact Us</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="section-block">
+        <section class="ops section-block dark-panel">
+          <div class="section-kicker accent">Emergency Response</div>
+          <h2>Emergency Tree Removal</h2>
+          <p>
+            Our emergency teams specialize in rapid, safe removal of uprooted or structurally compromised trees that
+            threaten lives, property, or critical infrastructure. We use crane-assisted extraction, controlled rigging,
+            and certified climbers to minimize further damage.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn secondary" href="dispatch.html">Request Free Estimate</a>
+          </div>
+
+        </section>
+
+        <!-- about-wrap included -->
+          <section id="team" class="about-strip section-block dark-panel">
+          <div class="about-wrap">
+            <div class="info-column">
+              <h3>About Us</h3>
+              Southern Classic Tree Experts is statewide heavy timber extraction infrastructure. Fully bonded, licensed crane teams
+              operating daily.
+            </div>
+              <div class="info-column">
+                <h3>Resources</h3>
+                Emergency Claims,Insurance Specs, Storm Safety, Equipment Specs.
+              </div>
+            <div class="info-column">
+                <h3>Locations</h3>
+                Cumming, Alpharetta, Suwanee, Johns Creek, Roswell, Marietta and more.
+              </div>
+            </div>
+          
+
+          <div class="bottom-bar">
+            <p>© 2026 Southern Classic Tree Experts. All tactical, crane, and rigging specs subject to dynamic weather criteria.</p>
+            <div class="legal-links">
+              <a href="#">Terms of Operation</a>
+              <a href="#">Privacy Protocol</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+    <script src="hero-bg.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        if (navToggle && mainNav) {
+          navToggle.addEventListener('click', function () { const isOpen = mainNav.classList.toggle('nav-open'); navToggle.setAttribute('aria-expanded', String(isOpen)); });
+          navLinks.forEach(l => l.addEventListener('click', () => { mainNav.classList.remove('nav-open'); navToggle.setAttribute('aria-expanded', 'false'); }));
+        }
+      });
+    </script>
+  </body>
+</html>
