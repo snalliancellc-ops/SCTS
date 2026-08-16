@@ -215,7 +215,6 @@ section[id] {
   display: grid;
   grid-template-columns: 1.2fr 1.4fr 2fr;
   gap: 2rem;
-  align-items: center;
 }
 
 .brand-block {
@@ -441,11 +440,10 @@ section[id] {
 }
 
 .mini-icon {
-  width: 76px;
-  height: 76px;
+  width: 46px;
+  height: 46px;
   border-radius: 18px;
-  background: rgba(47, 159, 102, 0.12);
-  border: 1px solid rgba(47, 159, 102, 0.28);
+  background: rgba(19, 73, 127, 0.12);
   margin-bottom: 1.4rem;
   position: relative;
 }
@@ -530,7 +528,6 @@ section[id] {
 .dispatch {
   padding: 4rem 2rem 4.5rem;
   display: grid;
-  grid-template-columns: 1.02fr 1.1fr;
   gap: 3rem;
   max-width: 1280px;
   margin: 0 auto;
@@ -538,7 +535,6 @@ section[id] {
 
 .dispatch-copy h2 {
   margin: 0 0 1.3rem;
-  font-size: clamp(3.2rem, 4vw, 7rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
   color: var(--text);
@@ -546,7 +542,6 @@ section[id] {
 
 .dispatch-copy > p {
   margin: 0 0 2rem;
-  max-width: 560px;
   font-size: 1.15rem;
   line-height: 1.6;
   color: var(--muted);
@@ -571,8 +566,7 @@ section[id] {
   height: 38px;
   border-radius: 12px;
   display: inline-block;
-  background: rgba(242, 139, 45, 0.12);
-  border: 1px solid rgba(242, 139, 45, 0.3);
+  background: rgba(140, 195, 230, 0.12);
   position: relative;
 }
 
@@ -611,7 +605,7 @@ section[id] {
   font-size: 0.77rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(228, 236, 245, 0.82);
+  color: rgba(17, 17, 18, 0.82);
   font-weight: 700;
 }
 
@@ -620,9 +614,8 @@ section[id] {
   width: 100%;
   border-radius: 14px;
   border: 1px solid rgba(140, 163, 185, 0.3);
-  background: rgba(9, 19, 30, 0.9);
   color: rgba(224, 235, 244, 0.9);
-  min-height: 62px;
+  min-height: 22px;
   padding: 0 1.1rem;
   font-size: 1.05rem;
 }
@@ -649,7 +642,7 @@ section[id] {
 }
 
 .dispatch-form button {
-  background: linear-gradient(180deg, #f6933d 0%, #f28b2d 100%);
+  background: linear-gradient(180deg, #72ADD1 0%, #72ADD1 100%);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
@@ -689,17 +682,15 @@ section[id] {
 }
 
 .service-card {
-  background: rgba(250, 252, 250, 0.98);
-  border: 1px solid var(--border);
+  background: rgba(213, 230, 241, 0.98);
   border-radius: 24px;
   padding: 1.4rem 1.2rem 1.5rem;
-  min-height: 420px;
   display: flex;
   flex-direction: column;
 }
 
 .service-card.featured {
-  background: rgba(244, 249, 246, 0.98);
+  background: rgba(213, 230, 241, 0.98);
   border-color: rgba(47, 159, 102, 0.52);
 }
 
@@ -750,12 +741,19 @@ section[id] {
 }
 
 .icon-hammer::before {
-  width: 28px;
-  height: 28px;
-  border: 4px solid var(--accent);
-  border-radius: 50%;
-  border-right-color: transparent;
-  transform: rotate(18deg);
+  /* use the provided tree image centered inside the mini-icon */
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 101%;
+  width: 46px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  background-image: url('./assets/tree-icon.png');
+  background-size: contain;
+  background-position: center;
+  border-radius: 20px;
+  background-repeat: no-repeat;
 }
 
 .icon-bolt::before {
@@ -767,11 +765,13 @@ section[id] {
 
 .icon-alert::before {
   width: 0;
-  height: 0;
   border-left: 11px solid transparent;
   border-right: 11px solid transparent;
   border-bottom: 18px solid var(--accent);
+  left: 50%;
   top: 18px;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .icon-alert::after {
@@ -914,7 +914,7 @@ section[id] {
   z-index: 20;
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--border);
-  height: 180px;
+  height: 140px;
 }
 
 .ticker {
@@ -928,7 +928,7 @@ section[id] {
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 200;
 }
 
 .ticker span {
@@ -966,10 +966,10 @@ section[id] {
 }
 
 .main-nav {
+  display: flex;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1.1rem 2rem 1.2rem;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -1086,7 +1086,6 @@ section[id] {
   margin: 0;
   font-size: clamp(1.2rem, 1.6vw, 2rem);
   line-height: 1.45;
-  color: rgba(230, 235, 231, 0.7);
   
 }
 
@@ -1104,7 +1103,7 @@ section[id] {
   min-height: 74px;
   border-radius: 16px;
   padding: 0.75rem 1.2rem;
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: -0.04em;
   transition: transform 0.2s ease;
 }
@@ -1114,8 +1113,7 @@ section[id] {
 }
 
 .btn.primary {
-  min-width: 340px;
-  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+  min-width: 240px;
   box-shadow: 0 12px 26px rgba(47, 159, 102, 0.18);
   color: #fff;
 }
@@ -1141,14 +1139,12 @@ section[id] {
   flex-wrap: wrap;
   gap: 1.2rem;
   margin-top: 2.4rem;
-  color: rgba(230, 235, 231, 0.7);
   font-size: 1rem;
 }
 
 .trust-row span {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
 }
 
 
@@ -1222,7 +1218,7 @@ section[id] {
   }
 
   .brand-nav {
-    width: 100%;
+    flex: 1 1 auto;
     justify-content: space-between;
     min-width: 0;
   }
@@ -1328,3 +1324,80 @@ section[id] {
     justify-content: flex-start;
   }
 }
+
+/* Contact modal styles */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2000;
+  padding: 1rem;
+}
+.modal-backdrop.open {
+  display: flex;
+}
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 100%;
+  padding: 1.6rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal-form {
+  margin: 0;
+}
+.modal-form label {
+  display: block;
+  margin-top: 0.9rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+.modal-form textarea { resize: vertical; min-height: 80px; }
+.modal-form button { margin-top: 1rem; }
+
+/* form grid for dispatch page */
+.dispatch-form.modal-form .form-grid {
+  display: contents;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.dispatch-form.modal-form .form-item { display: contents; }
+.dispatch-form.modal-form .form-item > label { display: block; margin-top: 0; font-weight: 700; font-size: 0.85rem; }
+.dispatch-form.modal-form .form-item > input,
+.dispatch-form.modal-form .form-item > select,
+.dispatch-form.modal-form .form-item > textarea,
+.dispatch-form.modal-form .form-item .select-wrap > select { width: 100%; }
+.dispatch-form.modal-form .span-2 { grid-column: span 2; }
+.dispatch-form.modal-form .span-3 { grid-column: span 3; }
+.dispatch-form.modal-form .span-4 { grid-column: 1 / -1; }
+
+@media (max-width: 760px) {
+  .dispatch-form.modal-form .form-grid { grid-template-columns: 1fr; }
+}
+
+
