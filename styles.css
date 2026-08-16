@@ -344,7 +344,7 @@ section[id] {
   max-width: 980px;
   margin: 0 auto;
   text-align: center;
-  font-size: clamp(3rem, 4vw, 6rem);
+  font-size: clamp(1.9rem, 2vw, 3rem);
   line-height: 0.96;
   letter-spacing: -0.07em;
   font-weight: 900;
@@ -379,7 +379,7 @@ section[id] {
 
 .review-card p {
   margin: 0;
-  font-size: clamp(1.15rem, 1.6vw, 1.7rem);
+  font-size: 14px;
   line-height: 1.45;
   color: var(--text);
   text-align: justify;
@@ -619,7 +619,6 @@ section[id] {
   width: 100%;
   border-radius: 14px;
   border: 1px solid rgba(140, 163, 185, 0.3);
-  color: rgba(224, 235, 244, 0.9);
   min-height: 22px;
   padding: 0 1.1rem;
   font-size: 1.05rem;
@@ -1427,5 +1426,3 @@ section[id] {
 @media (max-width: 760px) {
   .dispatch-form.modal-form .form-grid { grid-template-columns: 1fr; }
 }
-
-
