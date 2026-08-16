@@ -209,13 +209,87 @@ section[id] {
 }
 
 .about-wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 3.5rem 2rem 1.5rem;
-  display: grid;
-  grid-template-columns: 1.2fr 1.4fr 2fr;
-  gap: 2rem;
-  
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Why Choose Us and Contact - no outer border */
+.about-wrap > .why-choose,
+.about-wrap > .contact-block {
+    border: none;
+    padding: 2rem;
+}
+
+.about-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+}
+
+/* Left new section */
+.new-section {
+    padding: 2rem;
+    text-align: justify
+}
+
+.brand-copy {
+    overflow: hidden;
+    padding: 0;
+}
+
+.brand-copy img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 348px;
+    object-fit: cover;
+}
+
+/* Right About section */
+.brand-block {
+    padding: 2rem;
+}
+
+/* Why Choose Us + Contact */
+.info-columns {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+
+    padding-top: 2rem;
+}
+
+.info-column {
+    border: none;
+    padding: 0;
+}
+
+.info-column h3 {
+    margin-top: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .about-wrap {
+        grid-template-columns: 2fr;
+    }
+
+    .info-columns {
+        grid-template-columns: 2fr;
+        gap: 2rem;
+    }
 }
 
 .brand-block {
@@ -274,7 +348,7 @@ section[id] {
 
 .info-columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(2, minmax(110px, 1fr));
   gap: 1.5rem;
 }
 
