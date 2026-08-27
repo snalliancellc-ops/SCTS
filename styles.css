@@ -1508,6 +1508,21 @@ section[id] {
 .modal-form {
   margin: 0;
 }
+
+.icon-firewood {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(19, 73, 127, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-firewood img {
+    width: 32px;
+    height: 32px;
+}
 .modal-form label {
   display: block;
   margin-top: 0.9rem;
