@@ -50,6 +50,11 @@ a {
 img {
   max-width: 100%;
   display: block;
+  border-radius: 25px;
+  background-image: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  height: 46px;
 }
 
 button,
