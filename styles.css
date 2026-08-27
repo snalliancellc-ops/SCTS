@@ -1451,6 +1451,50 @@ section[id] {
   /* Scroll the modal when its content is too tall */
   /*overflow-y: auto;*/
 }
+.brand-tagline {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin: 0.32rem 0 0;
+}
+
+.social-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.social-icons a {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 16px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons a:nth-child(1) {
+    background: #1877f2;
+}
+
+.social-icons a:nth-child(2) {
+    background: #e4405f;
+}
+
+.social-icons a:nth-child(3) {
+    background: #d32323;
+}
 .modal-close {
   position: absolute;
   top: 10px;
