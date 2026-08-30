@@ -307,7 +307,7 @@ section[id] {
   width: 160px;
   height: 120px;
   border-radius: 18px;
-  background-image: url("./logo.jpg");
+  background-image: url("./logo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1000,7 +1000,7 @@ section[id] {
   z-index: 20;
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--border);
-  height: 140px;
+  height: 165px;
 }
 
 .ticker {
