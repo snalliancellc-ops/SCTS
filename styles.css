@@ -83,7 +83,7 @@ section[id] {
 }
 
 .metrics-section {
-  min-height: 260px;
+  min-height: 100px;
   background: linear-gradient(180deg, rgba(249, 251, 249, 0.92), rgba(255, 255, 255, 0.96));
   border-bottom: 1px solid var(--border);
 }
@@ -503,7 +503,7 @@ section[id] {
 }
 
 .why-choose {
-  padding: 5rem 2rem 4rem;
+  padding: 2rem 2rem 4rem;
   background: #ffffff;
 }
 
@@ -715,7 +715,7 @@ section[id] {
 }
 
 .ops {
-  padding: 5rem 2rem 4rem;
+  padding: 2rem 2rem 4rem;
 }
 
 .ops-grid {
@@ -872,9 +872,9 @@ section[id] {
   transform: rotate(18deg);
 }
 
-.projects {
+/* .projects {
   padding: 5rem 2rem 4rem;
-}
+} */
 
 .project-grid {
   max-width: 1220px;
@@ -1125,7 +1125,7 @@ section[id] {
 .feature-hero {
   position: relative;
   min-height: 340px;
-  padding: 3rem 2rem 4rem;
+  /* padding: 3rem 2rem 4rem; */
   background: linear-gradient(180deg, rgba(242, 249, 245, 0.8), rgba(255, 255, 255, 0.95));
   border-top: 1px solid var(--border);
 }
